@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module("myApp", [])
-    .controller("userController",
+angular.module("ppm", [])
+    .controller("ppmCTRL",
         function($scope) {
             $scope.utente = { nome: "Mario", cognome: "Rossi"};
             $scope.saluta = function() {

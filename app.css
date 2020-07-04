@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-bg-dark-color: #e9e9e9;
+    --text: #2d2d2d;
+    --blue: #00bcd5;
+    --light-blue: #e6f5f8;
+    --dark-brue: #00252a;
+    --green: #009483;
+    --light-green: #e6f7f5;
+    --dark-green: #333333;
+    --violet: #833977;
+    --light-violet: #e8e1e7;
+    --dark-violet: #480035;
+    --main-padding: 15px;
+    --menu-width-desktop: 240px;
+    --menu-width-tablet: 90px;
+    --menu-width-smartphone: 230px;
+}
+
+    body{
+        background:var(--main-bg-color);
+        margin:0;
+        color:#fff;
+        height: 100%;
+    }
+
+    main{
+        position:relative;
+        height:100px;
+        background: grey;
+    }
+
+
+    .menu {
+        background: var(--main-bg-color);
+        width: 18.36%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        outline: none;
+        font: 15px "Montserrat Light", sans-serif;
+    }
+
+    .topnav {
+        background: var(--violet);
+        width: 100%;
+        height: 163px;
+    }

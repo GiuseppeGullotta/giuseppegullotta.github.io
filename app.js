@@ -1,12 +1,19 @@
 'use strict';
 
-angular.module("ppm", [])
-    .controller("ppmCTRL",
+angular.module("ppm", [
+    'ngRoute'
+])
+
+    .config(function($routeProvider) {
+        $routeProvider
+
+            .when("/login", {
+                templateUrl : "loginView/loginView.html"
+            })
+        })
+
+
+    .controller("indexCTRL",
         function($scope) {
-            $scope.utente = { nome: "Mario", cognome: "Rossi"};
-            $scope.saluta = function() {
-                return "Buongiorno " +
-                    $scope.utente.nome + " " +
-                    $scope.utente.cognome + "!"
-            };
+            $scope.nome = "Peppe";
         });

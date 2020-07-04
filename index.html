@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PUZZLE - Fuori Diario</title>
+    <title>PPM - Event Manager</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
     <!-- ANGULAR JS -->
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
     <script src="lib/angular/angular-resource.min.js"></script>
     <script src="lib/angular/angular-animate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,18 +21,36 @@
     <script src="lib/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
 
+    <!-- Script per le icone -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
     <!-- IMPORTAZIONE APP.JS -->
     <script src="app.js"></script>
+    <script src="loginView/loginView.js"></script>
+
+    <!-- IMPORTAZIONE .JS VISTE -->
 
     <!-- jQuery (utilizzata per i plug-in di BootStrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+
 </head>
 
-<body ng-app="ppm">
+<body ng-app="ppm" ng-controller="indexCTRL">
 
-    <div ng-controller="ppmCTRL">
-        Questo è un test.
-        {{saluta()}}
-    </div>
+    <header>
+        <div class="topnav"><span> test </span></div>
+    </header>
+
+    <main>
+        <div>
+            ciao {{nome}}! Quale colore ti piace? <br>
+            <a href="#!login">Clicca</a>
+            <div ng-view></div>
+        </div>
+    </main>
+
 </body>

@@ -13,10 +13,18 @@
     --violet: #833977;
     --light-violet: #e8e1e7;
     --dark-violet: #480035;
+    --grey: gray;
+    --light-grey: light-grey;
 
     --header-h: 70px;
-
+    --button-sidebar-h: 40px;
+    --button-sidebar_title-h: 30px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 
     body{
         background:var(--main-bg-color);
@@ -34,18 +42,8 @@
     }
 
 
-    .menu {
-    background: var(--main-bg-color);
-    width: 18.36%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    outline: none;
-    font: 15px "Montserrat Light", sans-serif;
-    }
 
-
+/* --------------- HEADER CSS ----------- */
     .navbar {
         height: var(--header-h);
         background: var(--violet);
@@ -94,36 +92,151 @@
         float: left;
     }
 
-/* Style buttons */
-.btn_header {
-    background-color: var(--violet); /* Blue background */
-    border: none; /* Remove borders */
-    color: black; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 25px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
-    border-radius: 0;
-    width: var(--header-h);
-    height: var(--header-h);
-}
+    /* IMPOSTO FONT UGUALE PER TUTTI I PULSANTI */
+    button {
+        font: 15px "Montserrat SemiBold", sans-serif;
+    }
 
-/* Darker background on mouse-over */
-.btn_header:hover {
-    background-color: var(--light-violet);
-    color: var(--violet);
-    border-radius: 0;
-    border: none;
+    /* Style buttons */
+    .btn_header {
+        background-color: var(--violet); /* Blue background */
+        border: none; /* Remove borders */
+        color: black; /* White text */
+        padding: 12px 16px; /* Some padding */
+        font-size: 25px; /* Set a font size */
+        cursor: pointer; /* Mouse pointer on hover */
+        border-radius: 0;
+        width: var(--header-h);
+        height: var(--header-h);
+    }
 
-}
+    /* Darker background on mouse-over */
+    .btn_header:hover {
+        background-color: var(--light-violet);
+        color: var(--violet);
+        border-radius: 0;
+        border: none;
 
-/* Pulsante cliccato */
-button:active{
-    background-color: var(--light-violet);
-    color: var(--violet);
-    border-radius: 0;
-    border: none;
-}
+    }
 
+    /* Pulsante cliccato */
+    .bnt_header:active{
+        background-color: var(--light-violet);
+        color: var(--violet);
+        border-radius: 0;
+        border: none;
+    }
+
+/* --------------- FINE HEADER CSS ----------- */
+
+/* --------------- SIDEBAR CSS ----------- */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+    .row {
+        margin: 0;
+        height: 100%;
+    }
+
+    /* Create three unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 0;
+    }
+
+    /* Left and right column */
+    .column.side {
+        width: 18.36%;
+        background: blue;
+    }
+
+    /* Middle column */
+    .column.middle {
+        width: 81.64%;
+        background: black;
+    }
+
+    .fas{
+        padding-right:10px;
+        padding-left: 20px;
+    }
+
+    .btn_homepage {
+        text-align: left;
+        border: none;
+        width: 100%;
+        height: var(--button-sidebar-h);
+    }
+
+    .btn_titoloevento {
+        height: var(--button-sidebar_title-h);
+    }
+
+    .btn_titoloevento:disabled {
+        text-align: left;
+        border: none;
+        width: 100%;
+        color: white;
+        background: var(--blue);
+    }
+
+    .btn_sez1 {
+        font-family: "Montserrat Medium", sans-serif;
+        text-align: left;
+        border: none;
+        width: 100%;
+        height: var(--button-sidebar-h);
+    }
+
+    .btn_sez2 {
+        font-family: "Montserrat Medium", sans-serif;
+        text-align: left;
+        border: none;
+        width: 100%;
+        height: var(--button-sidebar-h);
+    }
+
+    .btn_sez3 {
+        font-family: "Montserrat Medium", sans-serif;
+        text-align: left;
+        border: none;
+        width: 100%;
+        height: var(--button-sidebar-h);
+    }
+
+    .btn_team {
+        height: var(--button-sidebar_title-h);
+    }
+
+    .btn_team:disabled {
+        text-align: left;
+        border: none;
+        width: 100%;
+        color: white;
+        background: var(--green);
+
+    }
+
+
+    .btn_profilo {
+            height: var(--button-sidebar_title-h);
+        }
+
+    .btn_profilo:disabled {
+        text-align: left;
+        border: none;
+        width: 100%;
+        color: white;
+        background: var(--grey);
+    }
+
+
+
+
+/* --------------- HEADER CSS ----------- */
+
+
+
+.
 
 /*
     .topnav {

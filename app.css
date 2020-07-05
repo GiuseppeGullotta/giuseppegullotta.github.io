@@ -13,10 +13,9 @@
     --violet: #833977;
     --light-violet: #e8e1e7;
     --dark-violet: #480035;
-    --main-padding: 15px;
-    --menu-width-desktop: 240px;
-    --menu-width-tablet: 90px;
-    --menu-width-smartphone: 230px;
+
+    --header-h: 70px;
+
 }
 
     body{
@@ -24,28 +23,132 @@
         margin:0;
         color:#fff;
         height: 100%;
+        font: 15px "Montserrat Light", sans-serif;
     }
 
     main{
         position:relative;
         height:100px;
         background: grey;
+        font: 15px "Montserrat Light", sans-serif;
     }
 
 
     .menu {
-        background: var(--main-bg-color);
-        width: 18.36%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        outline: none;
-        font: 15px "Montserrat Light", sans-serif;
+    background: var(--main-bg-color);
+    width: 18.36%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    outline: none;
+    font: 15px "Montserrat Light", sans-serif;
     }
 
-    .topnav {
+
+    .navbar {
+        height: var(--header-h);
         background: var(--violet);
-        width: 100%;
-        height: 163px;
+        font: 15px "Montserrat Light", sans-serif;
+        padding-left: 0;
+        padding-right: 0;
+        bottom:0;
     }
+
+    .nav-link {
+        color: white;
+        align-items: flex-end;
+    }
+
+    .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+
+    #profiloUP {
+        position:absolute;
+        bottom:0;
+        padding-left: 10px;
+        font-size: 10px;
+        font-family: 'Montserrat Medium', sans-serif;
+        line-height: 0px;
+    }
+
+    #sottotitolo {
+        font-family: 'Montserrat Light', sans-serif
+    }
+
+
+
+    img.foto_profilo {
+        height: var(--header-h);
+        padding: 0;
+        float: left;
+    }
+
+    img.logo_center {
+        height: var(--header-h);
+        padding: 0;
+        float: left;
+    }
+
+/* Style buttons */
+.btn_header {
+    background-color: var(--violet); /* Blue background */
+    border: none; /* Remove borders */
+    color: black; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 25px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 0;
+    width: var(--header-h);
+    height: var(--header-h);
+}
+
+/* Darker background on mouse-over */
+.btn_header:hover {
+    background-color: var(--light-violet);
+    color: var(--violet);
+    border-radius: 0;
+    border: none;
+
+}
+
+/* Pulsante cliccato */
+button:active{
+    background-color: var(--light-violet);
+    color: var(--violet);
+    border-radius: 0;
+    border: none;
+}
+
+
+/*
+    .topnav {
+    height:  var(--header-h);
+    background: var(--violet);
+    width: 100%;
+
+    }
+
+
+
+
+
+
+
+    img.image-notifica {
+    height:  var(--header-h);
+    float: right;
+    margin: 0 1% 0 1%;
+    }
+
+    img.image-posta {
+    height:  var(--header-h);
+    float: right;
+    margin: 0 0 0 0;
+    }
+
+*/

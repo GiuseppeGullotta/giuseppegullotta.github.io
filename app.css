@@ -238,21 +238,21 @@
 
     .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 25% 25% 25% 25%;
         grid-gap: 10px;
         background-color: var(--main-bg-color);
         font: 17px "Montserrat SemiBold", sans-serif;
-        color: black;
-        padding: 23px 30px 10px 30px;
+        color: #000000;
+        padding-left: 30px;
+        padding-right: 50px;
     }
 
     .grid-container > div {
             background-color: var(--light-blue);
-            height: 150px;
+            height: 200px;
             text-align: left;
-            padding: 20px 0;
             font-size: 30px;
-        }
+    }
 
     .titolo_pagina{
         padding-top: 20px;
@@ -262,7 +262,71 @@
 
     .item1 {
         grid-column-start: 1;
+        grid-column-end: 2;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
+    .item2 {
+        grid-column-start: 2;
         grid-column-end: 3;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
+    .item3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
+    .item4 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
+
+    .sotto1item {
+        width: 100%;
+        background: var(--blue);
+        height: 25%;
+        color: white;
+        margin: auto;
+        font: 14px "Montserrat SemiBold", sans-serif;
+        display: flex;
+        padding-left: 20px;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .sotto2item {
+        width: 100%;
+        background: var(--light-blue);
+        height: 75%;
+        font: 14px "Montserrat Light", sans-serif;
+        display: flex;
+        padding-left: 20px;
+        padding-top: 20px;
+        justify-content: left;
     }
 /* --------------- FINE CONTAINER CENTRALE ----------- */
 

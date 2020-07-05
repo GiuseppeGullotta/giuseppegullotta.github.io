@@ -1,16 +1,11 @@
 'use strict';
 
 angular.module("ppm", [
-    'ngRoute'
+    'ngRoute',
+    'ppm.loginView',
+    'ppm.dashboardView'
 ])
 
-    .config(function($routeProvider) {
-        $routeProvider
-
-            .when("/login", {
-                templateUrl : "loginView/loginView.html"
-            })
-        })
 
 
     .controller("indexCTRL",

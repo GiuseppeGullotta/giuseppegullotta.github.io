@@ -34,7 +34,9 @@
     <script src="app.js"></script>
 
     <!-- IMPORTAZIONE .JS VISTE -->
-    <script src="loginView/loginView.js"></script>                              <!-- loginView -->
+    <script src="loginView/loginView.js"></script>                                          <!-- loginView -->
+    <script src="dashboardView/dashboardView.js"></script>                                  <!-- dashboardView -->
+
 
     <!-- jQuery (utilizzata per i plug-in di BootStrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -87,7 +89,7 @@
     <div class="column side">
         <a href="#"><button class="btn_homepage"><i class="fas fa-home"></i>&nbsp; HOMEPAGE</button><br></a>
             <button disabled class="btn_titoloevento"> FESTIVAL DELLA VITA</button><br>
-        <a href="#"><button class="btn_sez1"><i class="fas fa-tachometer-alt"></i>&nbsp; Dashboard</button><br></a>
+        <a href="#!dashboard"><button class="btn_sez1"><i class="fas fa-tachometer-alt"></i>&nbsp; Dashboard</button><br></a>
         <a href="#"><button class="btn_sez1"><i class="fas fa-info"></i>&nbsp; &nbsp; Informazioni</button><br></a>
         <a href="#"><button class="btn_sez1"><i class="fas fa-map-marker-alt"></i>&nbsp; Venue</button><br></a>
         <a href="#"><button class="btn_sez1"><i class="fas fa-clipboard-list"></i>&nbsp; Task</button><br></a>
@@ -107,140 +109,13 @@
         <a href="#"><button class="btn_sez3"><i class="fas fa-sign-out-alt"></i>&nbsp; Esci</button><br></a>
     </div>
 
-    <div class="column middle">
-        <!-- CENTER -->
-        <div class="grid-container">
-            <!-- Titolo Pagina -->
-            <p class="titolo_pagina">DASHBOARD - Il Festival Della Vita</p>
+    <!-- Parte centrale -->
+    <div class="column middle" ng-view></div>
+    <!-- FINE CENTER -->
 
-            <!-- BOX INFORMAZIONI -->
-            <div class="item1">
-                <div class="sotto1item">INFORMAZIONI</div>
-                <div class="sotto2item">
-                    <p>
-                        <b>FESTIVAL DELLA VITA</b><br><br>
-                        <b>TIPOLOGIA</b>: &nbsp;Conferenza <br>
-                        <b>ALLESTIMENTO:</b> &nbsp;18/06/2020 09:00 - 18:00 <br>
-                        <b>DATA EVENTO:</b> &nbsp;19/06/2020 10:00 - 17:00 <br>
-                        <b>DISALLESTIMENTO:</b> &nbsp;20/06/2020 09:00 - 18:00 <br>
-                    </p>
-                </div>
-            </div>
+    <!-- NG-VIEW
 
-            <!-- BOX VENUE -->
-            <div class="item2">
-                <div class="sotto1item">VENUE</div>
-                <div class="sotto2item">
-                    <p>
-                        <b>OGR CULT - Sala Duomo</b><br><br>
-                        <b>INDIRIZZO:</b> &nbsp;Via Fasulla, 123 - TORINO <br>
-                        <b>CELL. RESP.:</b> &nbsp;347 9918591 <br>
-                        <b>E-MAIL:</b> &nbsp;venue@email.com <br>
-                        <b>NOTE:</b> &nbsp;chiamare ore ufficio <br>
-                    </p>
-                </div>
-            </div>
-
-            <!-- BOX CLIENTE -->
-            <div class="item3">
-                <div class="sotto1item">CLIENTE</div>
-                <div class="sotto2item">
-                    <p>
-                        <b>Filippo Verdi</b><br><br>
-                        <b>AZIENDA:</b> &nbsp;Aziendone S.R.L. <br>
-                        <b>CELL.:</b> &nbsp;347 1932458 <br>
-                        <b>E-MAIL:</b> &nbsp;filippo.verdi@email.com <br>
-                        <b>NOTE:</b> &nbsp;chiamare ore ufficio <br>
-                    </p>
-                </div>
-            </div>
-
-            <!-- BOX NOTE -->
-            <div class="item4">
-                <div class="sotto1item">NOTE</div>
-                <div class="sotto2item">
-                    <p>
-                        In questo spazio sarà possibile aggiungere tutte le note che si deriderano.
-                        Il limite massimo di caratteri è determinato dallo spazio disponibile.
-                    </p>
-                </div>
-            </div>
-
-            <!-- BOX AGENDA -->
-            <div class="item5">
-                <div class="sotto1item">AGENDA</div>
-                <div class="agenda_container">
-                    <!-- APPUNTAMENTO 1 -->
-                    <div class="agenda_item1">
-                        <div class="box_calendario">
-                            <p class="box_calendario_num">10</p>
-                            <p class="box_calendario_mese">giugno</p>
-                        </div>
-                    </div>
-                    <div class="agenda_item2">
-                        <p>
-                            <b> Riunione di produzione</b><br>
-                            &nbsp; <i class="fas fa-clock"></i>&nbsp; ore 10:00 <br>
-                            &nbsp; <i class="fas fa-map-marker-alt"></i>&nbsp; &nbsp;OGR - Sala Meeting <br>
-                            &nbsp;<i class="fas fa-users"></i>&nbsp;Tutto il team <br>
-                        </p>
-
-                    </div>
-                    <!-- APPUNTAMENTO 2 -->
-                    <div class="agenda_item1">
-                        <div class="box_calendario">
-                            <p class="box_calendario_num">11</p>
-                            <p class="box_calendario_mese">giugno</p>
-                        </div>
-                    </div>
-                    <div class="agenda_item2">
-                        <p>
-                            <b> Allineamento Tecnico</b><br>
-                            &nbsp; <i class="fas fa-clock"></i>&nbsp; ore 15:00 <br>
-                            &nbsp; <i class="fas fa-map-marker-alt"></i>&nbsp; &nbsp;OGR - Sala Meeting <br>
-                            &nbsp;<i class="fas fa-users"></i>&nbsp;Dir. Prod + Tecnica <br>
-                        </p>
-
-                    </div>
-                    <!-- APPUNTAMENTO 3 -->
-                    <div class="agenda_item1">
-                        <div class="box_calendario">
-                            <p class="box_calendario_num">13</p>
-                            <p class="box_calendario_mese">giugno</p>
-                        </div>
-                    </div>
-                    <div class="agenda_item2">
-                        <p>
-                            <b> Secondo sopralluogo</b><br>
-                            &nbsp; <i class="fas fa-clock"></i>&nbsp; ore 17:00 <br>
-                            &nbsp; <i class="fas fa-map-marker-alt"></i>&nbsp; &nbsp;OGR CULT - Sala Duomo <br>
-                            &nbsp;<i class="fas fa-users"></i>&nbsp;Dir. Prod + Segreteria + Tecnica + Logistica <br>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- BOX TASK -->
-            <div class="item6">
-                <div class="sotto1item">NOTE</div>
-                <div class="sotto2item">
-                    <p>
-                        In questo spazio sarà possibile aggiungere tutte le note che si deriderano.
-                        Il limite massimo di caratteri è determinato dallo spazio disponibile.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        <!-- FINE CENTER -->
-
-
-        <!-- NG-VIEW
-        <div class="container-fluid" ng-view></div>
-         -->
-    </div>
-
+             -->
 
 </div>
 </body>

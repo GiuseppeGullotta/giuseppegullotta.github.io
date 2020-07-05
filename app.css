@@ -146,7 +146,7 @@
     /* Left and right column */
     .column.side {
         width: 18.36%;
-        background: blue;
+        background: var(--main-bg-color);
     }
 
     /* Middle column */
@@ -155,6 +155,7 @@
         border-left-style: solid;
         border-left-color: var(--grey);
         border-left-width: 1px;
+        height: 100%;
     }
 
     .fas{
@@ -239,7 +240,9 @@
     .grid-container {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-gap: 10px;
+        grid-template-rows: 80px 220px 500px;
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
         background-color: var(--main-bg-color);
         font: 17px "Montserrat SemiBold", sans-serif;
         color: #000000;
@@ -249,7 +252,6 @@
 
     .grid-container > div {
             background-color: var(--light-blue);
-            height: 200px;
             text-align: left;
             font-size: 30px;
     }
@@ -304,11 +306,33 @@
         border-width: 2px;
     }
 
+    .item5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
+    .item6 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: var(--blue);
+        border-style: solid;
+        border-color: var(--blue);
+        border-width: 2px;
+    }
+
 
     .sotto1item {
         width: 100%;
         background: var(--blue);
-        height: 25%;
+        height: 44px;
         color: white;
         margin: auto;
         font: 14px "Montserrat SemiBold", sans-serif;
@@ -325,9 +349,55 @@
         font: 14px "Montserrat Light", sans-serif;
         display: flex;
         padding-left: 20px;
+        padding-right: 20px;
         padding-top: 20px;
         justify-content: left;
     }
+
+    .agenda_container{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding: 30px;
+        grid-row-gap: 20px;
+
+    }
+
+    .agenda_item1{
+        text-align: center;
+        height: 120px;
+        display: flex;
+        padding-left: 40px;
+        padding-top: 0;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .box_calendario {
+        background-color: var(--blue);
+        width: 100px;
+        height: 100px;
+        padding-top: 6px;
+    }
+
+    .box_calendario_num {
+        color: white;
+        font-size: 52px;
+        margin: 0px
+    }
+    .box_calendario_mese {
+        color: white;
+        font-size: 14px;
+        margin: -2px;
+
+    }
+    .agenda_item2{
+
+        padding: 10px 20px 0 20px;
+        text-align: left;
+        font: 14px "Montserrat Light", sans-serif;
+        line-height: 22px;
+    }
+
 /* --------------- FINE CONTAINER CENTRALE ----------- */
 
 

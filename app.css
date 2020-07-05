@@ -152,7 +152,9 @@
     /* Middle column */
     .column.middle {
         width: 81.64%;
-        background: black;
+        border-left-style: solid;
+        border-left-color: var(--grey);
+        border-left-width: 1px;
     }
 
     .fas{
@@ -230,13 +232,40 @@
     }
 
 
+/* --------------- FINE SIDEBAR CSS ----------- */
 
+/* --------------- CONTAINER CENTRALE ----------- */
 
-/* --------------- HEADER CSS ----------- */
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 10px;
+        background-color: var(--main-bg-color);
+        font: 17px "Montserrat SemiBold", sans-serif;
+        color: black;
+        padding: 23px 30px 10px 30px;
+    }
 
+    .grid-container > div {
+            background-color: var(--light-blue);
+            height: 150px;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 30px;
+        }
 
+    .titolo_pagina{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font: 20px "Montserrat SemiBold", sans-serif;
+    }
 
-.
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+/* --------------- FINE CONTAINER CENTRALE ----------- */
+
 
 /*
     .topnav {

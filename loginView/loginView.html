@@ -1,3 +1,54 @@
-<div ng-controller="LoginCtrl">
-    <p> Pagina del Login! </p>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../giuseppegullotta.github.io/loginView/loginView.css">
+</head>
+
+<body ng-controller="LoginCtrl">
+
+
+<!-- MESSAGGIO DI ERRORE -->
+
+<!-- FINE MESSAGGIO DI ERRORE -->
+
+<p class="titolo_login"> PAGINA DI LOGIN</p>
+
+
+
+<!-- MESSAGGIO DI ERRORE -->
+
+<!-- FINE MESSAGGIO DI ERRORE -->
+<div class="login">
+    <img src="../giuseppegullotta.github.io/images/logo_BN.png" alt="" class="logo_login"/>
+    <form id="msform" name="loginForm" role="form" ng-submit="signIn()">
+
+    <!-- fieldsets -->
+
+    <!-- fieldsets 0 -->
+    <div>
+        <input type="text" name="email_login" placeholder="Inserisci Email" required="" autofocus="" ng-model="user.email"/>
+        <input type="password" name="password_login" placeholder="Inserisci password" required="" ng-model="user.password"/>
+
+        <!-- ERRORE PASSWORD -->
+        <p ng-if="flagPasswordNonValida">Errore! Password non valida!</p>
+
+        <!-- ERRORE EMAIL -->
+        <p ng-if="flagEmailNonValida">Errore! Email non valida!</p>
+
+        <br>
+        <input type="submit" name="next" class="next action-button" value="LogIn" ng-disabled="loginForm.$invalid"/>
+        <br>
+        <br>
+        <h2 id="registrato" align="left"> &emsp;Non sei ancora registrato?&emsp;
+            <span id="registrati">
+                <a href="#!authView">Registrati</a>
+            </span>
+        </h2 >
+
+    </div>
+
+</form>
 </div>
+
+</body>

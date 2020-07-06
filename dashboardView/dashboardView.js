@@ -1,6 +1,7 @@
 
 angular.module('ppm.dashboardView', [
-    'ngRoute'
+    'ngRoute',
+
 ])
     .config(function($routeProvider) {
         $routeProvider
@@ -12,8 +13,12 @@ angular.module('ppm.dashboardView', [
             })
     })
 
-    .controller('dashboardCtrl',['$scope', function($scope) {
+    .controller('dashboardCtrl',['$scope', '$rootScope',
+        function($scope, $rootScope) {
 
         $scope.nome_evento = 'Festival Della Vita';
+
+        $scope.pagina = {};
+        $rootScope.pagina.pagCorrente = 'dashboardView';
 
     }]);

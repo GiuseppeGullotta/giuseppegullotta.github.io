@@ -30,6 +30,10 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
 
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+
     <!-- IMPORTAZIONE APP.JS -->
     <script src="app.js"></script>
 
@@ -37,6 +41,9 @@
     <script src="loginView/loginView.js"></script>                                          <!-- loginView -->
     <script src="dashboardView/dashboardView.js"></script>                                  <!-- dashboardView -->
 
+    <!-- IMPORTAZIONE .JS COMPONENTI -->
+    <script src="components/authentication/authentication.js"></script>         <!-- autenticazione -->
+    <script src="components/authentication/authentication-service.js"></script> <!-- auth-servizio  -->
 
     <!-- jQuery (utilizzata per i plug-in di BootStrap) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -44,11 +51,11 @@
 
 </head>
 
-<body ng-app="ppm" ng-controller="indexCTRL">
+<body ng-app="ppm" ng-controller="indexCtrl">
 
 <header>
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md" ng-if="!(pagina.pagCorrente === 'loginView')">
 
         <!-- BOX PROFILO UP SX -->
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
@@ -84,9 +91,11 @@
     </nav>
 </header>
 
-    <!-- Sidebar -->
+
 <div class="row">
-    <div class="column side">
+
+    <!-- SIDEBAR -->
+    <div class="column side" ng-if="!(pagina.pagCorrente === 'loginView')">
         <a href="#"><button class="btn_homepage"><i class="fas fa-home"></i>&nbsp; HOMEPAGE</button><br></a>
             <button disabled class="btn_titoloevento"> FESTIVAL DELLA VITA</button><br>
         <a href="#!dashboard"><button class="btn_sez1"><i class="fas fa-tachometer-alt"></i>&nbsp; Dashboard</button><br></a>
@@ -106,16 +115,13 @@
             <button disabled class="btn_profilo">PROFILO PERSONALE</button><br>
         <a href="#"><button class="btn_sez3"><i class="fas fa-address-book"></i>&nbsp; La mia rubrica</button><br></a>
         <a href="#"><button class="btn_sez3"><i class="fas fa-tools"></i>&nbsp; Impostazioni</button><br></a>
-        <a href="#"><button class="btn_sez3"><i class="fas fa-sign-out-alt"></i>&nbsp; Esci</button><br></a>
+        <a href="#!/loginView"><button class="btn_sez3" ng-click="logoutUser()"><i class="fas fa-sign-out-alt"></i>&nbsp; Esci</button><br></a>
     </div>
+    <!-------------------->
 
-    <!-- Parte centrale -->
+    <!-- NG-VIEW -->
     <div class="column middle" ng-view></div>
-    <!-- FINE CENTER -->
-
-    <!-- NG-VIEW
-
-             -->
+    <!-------------------->
 
 </div>
 </body>
